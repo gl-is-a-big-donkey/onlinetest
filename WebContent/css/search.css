@@ -1,0 +1,178 @@
+@charset "UTF-8";
+#search_bar{
+	position:absolute;
+	width:800px;
+	height:200px;
+	left:20%;
+	top:80px;
+}
+#search_bar label{
+	position:absolute;
+	width:300px;
+}
+#search_no{
+	left:0px;
+}
+#search_name{
+	right:0px;
+}
+#search_stem{
+	left:200px;
+}
+#btn_search{ 
+	position:absolute;
+	width:84px;
+	height:44px;
+	left:360px;
+	top:40px;
+    border: none;
+    color: white;
+    font-family:Arial;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+#btn_search1{ 
+	position:absolute;
+	width:84px;
+	height:44px;
+	left:360px;
+	top:0px;
+    border: none;
+    color: white;
+    font-family:Arial;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+.field{
+  --uiFieldPaddingTop: var(--fieldPaddingTop, 0px);
+  --uiFieldPaddingRight: var(--fieldPaddingRight, 0px);
+  --uiFieldPaddingBottom: var(--fieldPaddingBottom, 0px);
+  --uiFieldPaddingLeft: var(--fieldPaddingLeft, 0px);
+
+  --uiFieldBorderColor: var(--fieldBorderColor, transpatent);
+  --uiFieldBorderTop: var(--fieldBorderTop, 0px);
+  --uiFieldBorderRight: var(--fieldBorderRight, 0px);
+  --uiFieldBorderBottom: var(--fieldBorderBottom, 0px);
+  --uiFieldBorderLeft: var(--fieldBorderLeft, 0px);
+
+  --uiFieldBgColor: var(--fieldBgColor, transpatent);
+  --uiFieldPlaceholderColor: var(--fieldPlaceholderColor, #767676);
+  --uiFieldAnimationDuration: var(--fieldAnimationDuration, .3s);
+  --uiFieldFonstSize: var(--fieldFontSize, 16px);
+
+  position: relative;  
+}
+
+.field__input{
+  width: 100%;
+  box-sizing: border-box;
+  background-color: var(--uiFieldBgColor);
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border-radius: 0;
+
+  border-style: solid;
+  border-color: var(--uiFieldBorderColor);
+
+  border-top-width: var(--uiFieldBorderTop);
+  border-right-width: var(--uiFieldBorderRight);
+  border-bottom-width: var(--uiFieldBorderBottom);
+  border-left-width: var(--uiFieldBorderLeft);
+
+  padding-top: var(--uiFieldPaddingTop);
+  padding-right: var(--uiFieldPaddingRight);
+  padding-bottom: var(--uiFieldPaddingBottom);
+  padding-left: var(--uiFieldPaddingLeft);
+
+  font-family: inherit;
+  font-size: 100%;
+  color: inherit;
+}
+
+.field__input::-webkit-input-placeholder{ 
+  color: var(--uiFieldPlaceholderColor);
+  opacity: 0;
+}
+
+.field__input::-moz-placeholder{ 
+  color: var(--uiFieldPlaceholderColor);
+  opacity: 0;
+}
+
+.field__input:focus{
+  outline: none;  
+}
+
+.field__input:focus::-webkit-input-placeholder{ 
+  -webkit-transition: opacity var(--uiFieldAnimationDuration) ease-out var(--uiFieldAnimationDuration); 
+  transition: opacity var(--uiFieldAnimationDuration) ease-out var(--uiFieldAnimationDuration);
+  opacity: 1;
+}
+
+.field__input:focus::-moz-placeholder{ 
+  -webkit-transition: opacity var(--uiFieldAnimationDuration) ease-out var(--uiFieldAnimationDuration); 
+  transition: opacity var(--uiFieldAnimationDuration) ease-out var(--uiFieldAnimationDuration);
+  opacity: 1;
+}
+
+.field__label{
+  position: absolute;
+  top: calc(0px + var(--uiFieldPaddingTop) + var(--uiFieldBorderTop));
+  left: calc(0px + var(--uiFieldPaddingLeft) + var(--uiFieldBorderLeft));
+
+  pointer-events: none;
+  font-size: .9em;
+
+  -webkit-transition: top var(--uiFieldAnimationDuration) cubic-bezier(0.9,-0.15, 0.1, 1.15), opacity var(--uiFieldAnimationDuration) ease-out;
+
+  transition: top var(--uiFieldAnimationDuration) cubic-bezier(0.9,-0.15, 0.1, 1.15), opacity var(--uiFieldAnimationDuration) ease-out;
+  will-change: top, opacity;
+}
+
+.field__input:not(:placeholder-shown) ~ .field__label{
+  opacity: 0;
+  top: calc(0px + var(--uiFieldPaddingTop) + var(--uiFieldBorderTop));
+}
+
+.field__input:focus ~ .field__label{
+  opacity: 1;
+  top: calc(-1 * calc(var(--uiFieldPaddingTop) + var(--uiFieldBorderTop) + 15px));
+}
+
+.search{
+  --uiFieldPaddingTop: var(--fieldPaddingTop, 15px);
+  --uiFieldPaddingRight: var(--fieldPaddingRight, 15px);
+  --uiFieldPaddingBottom: var(--fieldPaddingBottom, 15px);
+  --uiFieldPaddingLeft: var(--fieldPaddingLeft, 15px);
+
+  --uiFieldBorderTop: var(--fieldBorderTop, 2px);
+  --uiFieldBorderRight: var(--fieldBorderRight, 2px);
+  --uiFieldBorderBottom: var(--fieldBorderBottom, 2px);
+  --uiFieldBorderLeft: var(--fieldBorderLeft, 2px);  
+}
+
+.search .field__input{  
+  -webkit-transition: border-color var(--uiFieldAnimationDuration) ease-out;  
+  transition: border-color var(--uiFieldAnimationDuration) ease-out;
+  will-change: border-color;
+}
+
+.search .field__input:focus{
+  --uiFieldBorderColor: var(--fieldBorderColorActive);
+}
+#table {
+	position:absolute;
+	width:1000px;
+	height:300px;
+	top:200px;
+	left:170px;
+}

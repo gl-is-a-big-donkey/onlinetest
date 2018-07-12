@@ -20,8 +20,8 @@
 		<p id="logo">
 			<img src="login/hashiqi.jpg">
 		</p>
-		<font id="admin_toptext" size="24" color="grey">厦门大学网络安全考试中心</font> <a
-			id="user_center" href="account.jsp">欢迎,<%=session.getAttribute("user")%></a>
+		<font id="admin_toptext" size="24" color="grey">厦门大学网络安全考试中心</font> 
+		<font id="user_center" >欢迎,<%=session.getAttribute("user")%></font>
 		<a id="exit" href="login.jsp">退出系统</a>
 	</div>
 	<div id="navi">

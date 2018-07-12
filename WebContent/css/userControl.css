@@ -466,19 +466,19 @@ li {
 	transition-property: width, text-indent, letter-spacing;
 	transition-timing-function: ease;
 }
-
+.archive-pages .next a{
+	text-align:center;
+}
 .archive-pages a {
 	text-decoration: none;
 }
-
-.archive-pages .next a:before {
+.archive-pages .next a:after {
 	content: ">";
 }
 
-.archive-pages .last a:before {
-	content: ">>";
+.archive-pages .last a:after {
+	content: '>>'
 }
-
 .archive-pages .first a:before {
 	content: "<<";
 }
@@ -578,14 +578,14 @@ table.altrowstable td {
 .evenrowcolor {
 	background-color: #c3dde0;
 }
-#label2{
+#label4{
 	position: absolute;
 	width:400px;
 	height:30px;
 	left:400px;
 	top:2px;
 }
-#label2 span {
+#label4 span {
 	position: absolute;
 	float: left;
 	width: 90px;

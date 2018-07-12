@@ -59,7 +59,7 @@ function search(){
 					var td5 = $("<td>"
 							+ peoples[i + (pn - 1) * 5].mail + "</td>");
 					var td6 = $("<td><a href='userEdit.jsp?no="
-							+ (i + (pn - 1) * 5 + 1) + "'>修改</a></td>");
+							+ peoples[i + (pn - 1) * 5].id + "'>修改</a></td>");
 					var td7 = $("<td><a onclick='del("
 							+ (i + (pn - 1) * 5) + ");'>删除</a></td>");
 					tr.append(td0);
@@ -166,9 +166,6 @@ function to_page(n) {
 }
 function to_main() {
 	window.location.href = 'adminMain.jsp';
-}
-function to_account() {
-	window.location.href = 'account.jsp';
 }
 function show_user() {
 	window.location.href = 'userControl.jsp';

@@ -6,10 +6,11 @@ function default_info() {
 	if (url.indexOf("?") != -1) {
 		var str = url.substr(1);
 		strs = str.split("=");
-		var no = parseInt(strs[1]) + 1;
+		var no = strs[1]+" , ";
 		$.ajax({
 			type : "post",
 			url : "StuServlet",
+			data:no,
 			success : function(data) {
 				var jsonarray = $.parseJSON(data);
 				peoples = jsonarray.peoples;
@@ -19,12 +20,12 @@ function default_info() {
 				var pno = $("#pno");
 				var mail = $("#mail");
 				var sex = $("#sex");
-				name.val(peoples[no].name);
-				id.val(peoples[no].id);
-				pwd.val(peoples[no].pwd);
-				pno.val(peoples[no].pno);
-				mail.val(peoples[no].mail);
-				sex.val(peoples[no].sex);
+				name.val(peoples[0].name);
+				id.val(peoples[0].id);
+				pwd.val(peoples[0].pwd);
+				pno.val(peoples[0].pno);
+				mail.val(peoples[0].mail);
+				sex.val(peoples[0].sex);
 			}
 		});
 	}
@@ -54,11 +55,32 @@ function submit_info() {
 			url : "InfoServlet",
 			data : data,
 			success : function(data) {
-				alert("提交成功");
 			},
 			dateType : "text",
 		});
+		alert("提交成功");
 		window.location.href = 'userControl.jsp';
 	}
+}
+function to_main() {
+	window.location.href = 'adminMain.jsp';
+}
+function show_user() {
+	window.location.href = 'userControl.jsp';
+}
+function search_user() {
+	window.location.href = 'searchUser.jsp';
+}
+function add_user() {
+	window.location.href = 'addUser.jsp';
+}
+function show_question() {
+	window.location.href = 'questionView.jsp';
+}
+function search_question() {
+	window.location.href = 'searchQuestion.jsp';
+}
+function add_question() {
+	window.location.href = 'addQuestion.jsp';
 }
 default_info();

@@ -19,8 +19,8 @@
 		<p id="logo">
 			<img src="login/hashiqi.jpg">
 		</p>
-		<font id="admin_toptext" size="24" color="grey">厦门大学网络安全考试中心</font> <a
-			id="user_center" href="account.jsp">欢迎,<%=session.getAttribute("user")%></a>
+		<font id="admin_toptext" size="24" color="grey">厦门大学网络安全考试中心</font>
+		<font id="user_center" >欢迎,<%=session.getAttribute("user")%></font>
 		<a id="exit" href="login.jsp">退出系统</a>
 	</div>
 	<div id="navi">
@@ -70,7 +70,7 @@
 		</p>
 	</div>
 	<div id="admin_mid">
-		<label id="label2"> <span>所属科目 :</span><select id="sub"
+		<label id="label4"> <span>所属科目 :</span><select id="sub"
 			onchange="myFunction()"><option value="0">化学类安全题</option>
 				<option value="1">医学生物类安全题</option>
 				<option value="2">通识类安全题</option>

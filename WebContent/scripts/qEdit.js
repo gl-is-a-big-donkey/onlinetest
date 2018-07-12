@@ -11,18 +11,19 @@ function set_default() {
 	if (url.indexOf("?") != -1) {
 		var str = url.substr(1);
 		strs = str.split("=");
-		no = parseInt(strs[1]) - 1;
+		no = strs[1]+",edit";
 		$.ajax({
 			type : "post",
 			url : "QServlet",
+			data:no,
 			success : function(data) {
 				var jsonarray = $.parseJSON(data);
 				questions = jsonarray.questions;
-				type = parseInt(questions[no].type);
+				type = parseInt(questions[0].type);
 				var answers = [];
-				answers = questions[no].answer.split("  ");
+				answers = questions[0].answer.split("  ");
 				answernum = answers.length - 1;
-				qno=questions[no].qno;
+				qno=questions[0].qno;
 				func();
 				if(type==0)
 					true_false();
@@ -38,12 +39,12 @@ function set_default() {
 	}
 }
 function default_info() {
-	$("#stem").val(questions[no].stem);
-	$("#sub").val(questions[no].subject);
-	$("#score").val(questions[no].score);
-	$("#correct").val(questions[no].correctAnswer);
+	$("#stem").val(questions[0].stem);
+	$("#sub").val(questions[0].subject);
+	$("#score").val(questions[0].score);
+	$("#correct").val(questions[0].correctAnswer);
 	var answers = [];
-	answers = questions[no].answer.split("  ");
+	answers = questions[0].answer.split("  ");
 	for (var i = 0; i < answers.length - 1; i++) {
 		answers[i] = answers[i].substring(2, answers[i].length);
 		$("#answer" + i).val(answers[i]);
@@ -174,17 +175,14 @@ function submit_q() {
 		url : "QuestionServlet",
 		data : data,
 		success : function(data) {
-			alert("提交成功");
 		},
 		dateType : "text",
 	});
+	alert("提交成功");
 	window.location.href = 'questionView.jsp';
 }
 function to_main() {
 	window.location.href = 'adminMain.jsp';
-}
-function to_account() {
-	window.location.href = 'account.jsp';
 }
 function show_user() {
 	window.location.href = 'userControl.jsp';

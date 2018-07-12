@@ -15,12 +15,13 @@ body{
     
 }
 
-#logo{
-	position:absolute;
-	left:50px;
-	top:10px;
-	white-space:nowrap; 
+#logo {
+	position: absolute;
+	left: 50px;
+	top: 20px;
+	white-space: nowrap;
 }
+
 #admin_toptext{
 	position:absolute;
 	left:180px;
@@ -281,7 +282,4 @@ li {
 	width:1353px;
 	height: 600px;
 	margin:10px 0 10px 5px;
-	background-image: url("../img/xmu.jpg");
-    background-size: 100%;  
-    background-repeat: no-repeat;  
 }               

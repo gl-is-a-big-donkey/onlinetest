@@ -20,8 +20,8 @@
 		<p id="logo">
 			<img src="login/hashiqi.jpg">
 		</p>
-		<font id="admin_toptext" size="24" color="grey">厦门大学网络安全考试中心</font> <a
-			id="user_center" href="account.jsp">欢迎,<%=session.getAttribute("user")%></a>
+		<font id="admin_toptext" size="24" color="grey">厦门大学网络安全考试中心</font> 
+		<font id="user_center" >欢迎,<%=session.getAttribute("user")%></font>
 		<a id="exit" href="login.jsp">退出系统</a>
 	</div>
 	<div id="navi">
@@ -58,14 +58,16 @@
 	</div>
 	<div id="admin_left">
 		<p>
-			<input type="button" class="btn" value="用户列表" onclick="show_user();" />
+			<input type="button" class="btn" value="新增试题"
+				onclick="add_question();" />
 		</p>
 		<p>
-			<input type="button" class="btn" value="查找用户"
-				onclick="search_user();" />
+			<input type="button" class="btn" value="查找试题"
+				onclick="search_question();" />
 		</p>
 		<p>
-			<input type="button" class="btn" value="新增用户" onclick="add_user();" />
+			<input type="button" class="btn" value="试题列表"
+				onclick="show_question();" />
 		</p>
 	</div>
 	<div id="admin_mid">

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javasee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javasee http://xmlns.jcp.org/xml/ns/javasee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
   <servlet>
     <servlet-name>StuServlet</servlet-name>
-    <servlet-class>abc.StuServlet</servlet-class>
+    <servlet-class>javas.StuServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>StuServlet</servlet-name>
@@ -10,7 +10,7 @@
   </servlet-mapping>
    <servlet>
     <servlet-name>LoginServlet</servlet-name>
-    <servlet-class>abc.LoginServlet</servlet-class>
+    <servlet-class>javas.LoginServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>LoginServlet</servlet-name>
@@ -18,7 +18,7 @@
   </servlet-mapping>
   <servlet>
     <servlet-name>InfoServlet</servlet-name>
-    <servlet-class>abc.InfoServlet</servlet-class>
+    <servlet-class>javas.InfoServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>InfoServlet</servlet-name>
@@ -26,7 +26,7 @@
   </servlet-mapping>
   <servlet>
     <servlet-name>QServlet</servlet-name>
-    <servlet-class>abc.QServlet</servlet-class>
+    <servlet-class>javas.QServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>QServlet</servlet-name>
@@ -34,11 +34,12 @@
   </servlet-mapping>
   <servlet>
     <servlet-name>QuestionServlet</servlet-name>
-    <servlet-class>abc.QuestionServlet</servlet-class>
+    <servlet-class>javas.QuestionServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>QuestionServlet</servlet-name>
     <url-pattern>/QuestionServlet</url-pattern>
   </servlet-mapping>
+
   
 </web-app>
